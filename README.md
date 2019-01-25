@@ -14,3 +14,14 @@
     `git checkout master && git merge <challenge_branch>`
     1. Push to master in your fork:<br/>
      `git push origin master`
+
+## List of challenge branches
+* 01_jsIntro
+* 02_largestNumber
+* 03_openDoor
+* 04_objects
+* 05_sumNumbers
+* 06_hiddenMessage
+* 07_binarySearch
+* 08_welcome
+* 09_oddOrEven
