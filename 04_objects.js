@@ -10,7 +10,7 @@ Check out the shop JS object and run the tests.
 
 Complete methods below, one by one.
 
-TESTS: mocha 04_json.js
+TESTS: mocha 04_objects.js
 
 */
 
@@ -32,14 +32,16 @@ const shop = {
         postcode: 4000
       },
       orders: [
-        { id: 61721, status: 'delivered', items: [
+        {
+          id: 61721, status: 'delivered', items: [
             { productId: 1, qty: 2 },
             { productId: 3, qty: 1 },
             { productId: 2, qty: 3 }
           ],
           notes: 'Please leave on doorstep'
         },
-        { id: 82721, status: 'delivered', items: [
+        {
+          id: 82721, status: 'delivered', items: [
             { productId: 4, qty: 100 }
           ],
           notes: 'Really enjoying coke ATM'
