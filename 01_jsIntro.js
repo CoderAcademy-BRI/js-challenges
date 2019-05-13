@@ -12,8 +12,12 @@
 
 // Define global variables here
 
+const myString = 'my string';
+let numbers = 7;
+
+
 function setNumbers(num) {
-  // Your code here
+  numbers = num
 }
 var assert = require('assert');
 
