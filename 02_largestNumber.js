@@ -11,9 +11,12 @@ with no changes to the function?
 */
 
 function largestNumber(arr) {
-    // Your code here
-    // Google JS syntax ;)
+    
+        return Math.max(arr);
+    
 }
+
+
 
 var assert = require('assert');
 
