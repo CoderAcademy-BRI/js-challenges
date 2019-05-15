@@ -10,10 +10,15 @@ Question: Why does the test pass for the third (last) test
 with no changes to the function?
 */
 
+
+
 function largestNumber(arr) {
+    let newarr = arr.filter(x=>{
+        return typeof x === 'number'
+    })
     
-        return Math.max(arr);
-    
+    newarr = newarr.sort(function(a, b){return b - a});
+    return newarr[0]
 }
 
 
