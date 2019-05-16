@@ -42,7 +42,7 @@ describe("multiplyMatrices with valid input", function() {
 	it("should return [[58,4],[139,154]] with inputs [[1, 2, 3], [4, 5, 6]] and [[7, 8], [9, 10], [11, 12]] ", function() {
 		matrix1 = [[1, 2, 3], [4, 5, 6]]
 		matrix2 = [[7, 8], [9, 10], [11, 12]]
-		expected = [[58, 4], [139, 154]]
+		expected = [[58, 64], [139, 154]]
 		assert.deepEqual(multiplyMatrices(matrix1, matrix2), expected)
 	})
 	it("should return [[18,5],[26,15]] with inputs [[2,3][4,1]] and [[6,4].[2,-1]]", function() {
