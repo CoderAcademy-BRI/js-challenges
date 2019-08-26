@@ -16,7 +16,7 @@ const myString = "my string"
 let numbers = 7
 
 function setNumbers(num) {
-  numbers = num
+  return numbers = num;
 }
 var assert = require('assert');
 
