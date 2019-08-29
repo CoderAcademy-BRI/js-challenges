@@ -13,72 +13,14 @@ What if no one is there?
 Beast mode: make it work when multiple people come to the door
 
 Test your solution:
-mocha 03_openDoor.js
+npm test
+
+(requires jest: npm i -g jest)
 */
 
 function openDoor(input) {
 	// Your code here
 }
-
-function makeItem(name, hasCoffee) {
-	item = new Object()
-	item.name = name
-	item.hasCoffee = hasCoffee
-	return item
+module.exports = {
+	openDoor
 }
-
-var assert = require("assert")
-
-describe("openDoor with one person at the door", function() {
-	let people = []
-	it('should return true if "Simon" and hasCoffee with single object', function() {
-		people = []
-		people.push(makeItem("Simon", true))
-		assert.equal(true, openDoor(people))
-	})
-	it('should return false if !"Simon" and hasCoffee', function() {
-		people = []
-		people.push(makeItem("Scott", true))
-		assert.equal(false, openDoor(people))
-	})
-	it('should return false if "Simon" and !hasCoffee', function() {
-		people = []
-		people.push(makeItem("Simon", false))
-		assert.equal(false, openDoor(people))
-	})
-})
-
-describe("openDoor with no one at the door", function() {
-	it("should return false if empty array passed", function() {
-		people = []
-		assert.equal(false, openDoor(people))
-	})
-})
-
-describe("BEAST MODE! openDoor with multiple people at the door", function() {
-	it("should return true if Simon is first with coffee", function() {
-		people = []
-		people.push(makeItem("Simon", true))
-		people.push(("Scott", true))
-		assert.equal(true, openDoor(people))
-	})
-	it("should return true if Simon is with coffee but not first", function() {
-		people = []
-		people.push(makeItem("Scott", true))
-		people.push(makeItem("Simon", true))
-		assert.equal(true, openDoor(people))
-	})
-	it("should return false if Simon is not there", function() {
-		people = []
-		people.push(makeItem("Sally", true))
-		people.push(makeItem("Scott", true))
-		assert.equal(false, openDoor(people))
-	})
-	it("should return false if Simon is there but does not have coffee", function() {
-		people = []
-		people.push(makeItem("Simon", false))
-		people.push(makeItem("Sally", true))
-		people.push(makeItem("Scott", true))
-		assert.equal(false, openDoor(people))
-	})
-})
