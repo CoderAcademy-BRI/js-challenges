@@ -26,7 +26,7 @@ till1       till2
 So this would take 12 total time, since all customers will be served when
 the last customer at till2 is served.
 
-Check your solutions with mocha 16_supermarket.js
+Check your solutions with npm test
 */
 
 
