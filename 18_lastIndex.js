@@ -19,23 +19,9 @@ _.findLastIndex(users, {
 */
 
 const findLastIndex = (array, needle) => {
-// Your code here!
+	// Your code here
 }
-  
-  
-// Check your solution by running these tests: mocha last_index.js
-const assert = require('assert');
 
-describe('Find Last Index', () => {
-  it('finds the last index', () => {
-    const objects = [
-      {a: 0, b: 0},
-      {a: 1, b: 1},
-      {a: 2, b: 2},
-      {a: 0, b: 0}
-    ];
-    const result = findLastIndex(objects, {a: 0});
-    assert.equal(result, 3);
-  })
-});
-  
+module.exports = {
+	findLastIndex
+}
