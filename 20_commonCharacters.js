@@ -15,32 +15,6 @@ const commonCharacters = (string1, string2) => {
 
 }
 
-// Your Code Should Pass:
-const chai = require('chai');
-const should = chai.should();
-    
-describe('Common Characters', () => {
-    it('returns commons characters', () => {
-        commonCharacters('abc', 'abc').should.equal('abc')
-    })
-
-    it('returns common characters', () => {
-        commonCharacters("What is love?", "Baby don't hurt me").should.equal('hatoe')
-    })
-
-    it('returns common characters', () => {
-        commonCharacters('Riding on a buffalo makes me more approachable', 'so what').should.equal('oash')
-    })
-
-    it('returns empty string', () => {
-        commonCharacters('', 'No more').should.equal('')
-    })
-
-    it('returns empty string', () => {
-        commonCharacters('No more', '').should.equal('')
-    })
-
-    it('returns empty string', () => {
-        commonCharacters('', '').should.equal('')
-    })
-})
+module.exports = {
+    commonCharacters
+};
