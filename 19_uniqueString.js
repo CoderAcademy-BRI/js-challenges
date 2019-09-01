@@ -1,23 +1,17 @@
 /*
-Find the unique string in an array, which should all contain letters.
+Find the unique string in an array. A unique string contains characters that are not present in any other string in the array. Return the string that is unique.
 
 Example:
 uniqueString(["alright", "isod", "Alright", "ALRIGHT"]) => "isod"
 
 Test your solution:
-mocha 22_uniqueString.js
+npm test
 */
 
 function uniqueString(array) {
     // Your code here
 }
 
-const assert = require('assert')
-
-describe('Unique string challenge', function() {
-    it('Should return the unique string', function() {
-        assert.deepEqual(uniqueString(['aa', 'AaA', 'aaaa', 'bBbB', 'aAaA', 'a']), 'bBbB')
-        assert.deepEqual(uniqueString(['kios', 'foo', 'ikos', 'ikso', 'kois', 'kiso']), 'foo')
-        assert.deepEqual(uniqueString(['abc', ' ', '  ']), 'abc')
-    })
-})
+module.exports = {
+    uniqueString
+};
