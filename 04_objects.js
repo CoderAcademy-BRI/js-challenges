@@ -80,44 +80,83 @@ const drinkShop = {
 }
 const shop = {
 	shopTitle: () => {
-		// Return the shop title (you have access to the shop object from here)
+		return drinkShop.title;
 	},
 
 	upperCase: string => {
-		// Return an uppercase version of string
+		return string.toUpperCase();
 	},
 
 	upperCaseShopTitle: () => {
-		// Return an uppercase shop title.
-		// Don't repeat yourself. Use the two functions you just built!
+		return shop.upperCase(shop.shopTitle());
 	},
 
 	productById: productId => {
-		// Return a specific product object
+		for (product of drinkShop.products) {
+			if (product.id === productId) {
+				return product;
+			}
+		}
+		return null;
 	},
 
 	productCost: productId => {
-		// given a product id, return its cost. DRY ;)
+		return shop.productById(productId).price;
 	},
 
 	formatAddress: email => {
-		// return(drinkShop.customers.'jane@doe.com'.address.(streetNumber, street, city, postcode))
-		// Given a user's email, return their address in the format:
-		// streetNumber street, city, postcode
-		// E.g. 10 Amelia St, Sydney, 2000
-		// Hint: some destructuring might save you a few lines.
+		// let add = drinkShop.customers[email].address;
+		 // return `${add.streetNumber} ${add.street}, ${add.city}, ${add.postcode}`
+		let customer = drinkShop.customers[email];
+		if (customer) {
+			let {
+				streetNumber,
+				street,
+				city,
+				postcode
+			} = drinkShop.customers[email].address;
+			return `${streetNumber} ${street}, ${city}, ${postcode}`
+		} else {
+			return null;
+		}
+	},
+
+	customerOrderById: (email, orderId) => {
+		let customer = drinkShop.customers[email];
+		let orders = customer ? customer.orders : [];
+		for (let order of orders) {
+			if (order.id === orderId) {
+				return order;
+			}
+		}
+		return null;
 	},
 
 	totalCost: (email, orderId) => {
-		// Return the total cost of an order.
+		let order = shop.customerOrderById(email, orderId);
+		if (order == null) {
+			return 0;
+		}
+		let items = order.items;
+		let total = 0;
+		for (let item of items) {
+			total += shop.productCost(item.productId) * item.qty;
+		}
+		return total;
 	},
 
 	addProduct: (id, title, price) => {
-		// Add a product to the shop.
+		drinkShop.products.push({id: id, title: title, price: price})
+		return true;
 	},
 
 	updateProductPrice: (id, newPrice) => {
-		// Update the price of a specific product
+		for (product of drinkShop.products) {
+			if (product.id == id) {
+				product.price = newPrice;
+			}
+		}
+		return true;
 	}
 }
 
