@@ -21,3 +21,4 @@
 * 03_openDoor
 * 04_objects
 * 05_sumNumbers
+* 06_hiddenMessage

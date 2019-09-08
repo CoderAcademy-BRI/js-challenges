@@ -14,7 +14,7 @@ function calculateTotalScore(scores) {
 
 function findWinner(players) {
     let winner = players[0].name;
-    if ( calculateTotalScore(players[0].scores) < calculateTotalScore(players[1].scores)) {
+    if (calculateTotalScore(players[0].scores) < calculateTotalScore(players[1].scores)) {
         winner = players[1].name;
         return winner;
     }
