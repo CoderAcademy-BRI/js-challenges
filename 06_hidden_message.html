@@ -30,6 +30,10 @@
       padding: 200px;
       display: none;
     }
+
+    #button-hide {
+      display: none;
+    }
     </style>
   </head>
 
@@ -51,10 +55,14 @@
   buttonShow.onclick = function () {
     // buttonShow has been clicked, show the hidden message.
     hiddenMessage.style.display = 'block';
+    buttonHide.style.display = 'inline';
+    buttonShow.style.display = "none";
   }
 
   buttonHide.onclick = function () {
     hiddenMessage.style.display = 'none';
+    buttonHide.style.display = 'none';
+    buttonShow.style.display = "inline";
   }
   </script>
 
