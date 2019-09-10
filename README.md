@@ -22,3 +22,4 @@
 * 04_objects
 * 05_sumNumbers
 * 06_hiddenMessage
+* 07_binarySearch
