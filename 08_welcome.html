@@ -1,4 +1,4 @@
-<!-- 
+<!--
   Run this file in your browser to see what it does.
   Your challenge is to:
   1. CSS: Give the page a touch of styling. Add some padding to the input box.
@@ -20,12 +20,15 @@
     body {
       text-align: center;
     }
+    #text-input {
+      padding: 10px;
+    }
     </style>
   </head>
 
   <body>
 
-    <p><input type="text" placeholder="Enter your name"></p>
+    <p><input id="text-input" type="text" placeholder="Enter your name"></p>
 
     <h1></h1>
 
@@ -36,7 +39,7 @@
   const welcomeMessage = document.querySelector('h1')
   name.onkeyup = function () {
     // hint: name.value gives you the current text in the input box
-    welcomeMessage.textContent = `Welcome, ${name.value}!`;
+    welcomeMessage.textContent = (name.value) ? `Welcome, ${name.value}!` : " ";
   }
   </script>
 
