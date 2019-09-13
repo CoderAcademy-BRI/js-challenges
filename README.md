@@ -23,3 +23,4 @@
 * 05_sumNumbers
 * 06_hiddenMessage
 * 07_binarySearch
+* 08_welcome
