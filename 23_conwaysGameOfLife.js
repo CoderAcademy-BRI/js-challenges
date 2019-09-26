@@ -9,29 +9,6 @@
 //     If a dead cell has exactly 3 neighbours, it comes to life.
 // Good luck and have fun!
 
-function conwaysGameOfLife(game) {
+exports.conwaysGameOfLife = function (game) {
 	// Your code goes here
 }
-
-let assert = require("assert")
-
-describe("Conway's Game Of Life", function() {
-	context("Testing One Generation", function() {
-		it("Should correctly return the next generation of the game", function() {
-			let game = [
-				[0, 0, 0, 0, 0],
-				[0, 0, 1, 1, 0],
-				[0, 1, 1, 0, 0],
-				[0, 0, 1, 0, 1],
-				[0, 0, 1, 0, 0]
-			]
-			assert.deepEqual(conwaysGameOfLife(game), [
-				[0, 0, 0, 0, 0],
-				[0, 1, 1, 1, 0],
-				[0, 1, 0, 0, 0],
-				[0, 0, 1, 0, 0],
-				[0, 0, 0, 1, 0]
-			])
-		})
-	})
-})
