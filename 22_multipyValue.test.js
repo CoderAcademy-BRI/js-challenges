@@ -8,10 +8,13 @@ describe('Multiply tests', () => {
   it('Should duplicate string when the value is a string', () => {
     expect(multiplyValue("[alright]", 3)).toBe("[alright][alright][alright]");
   });
+  it('Should return null when the first parameter is not a number or string', () => {
+    expect(multiplyValue([1, 2, 4], 3)).toBe(null);
+  });
   it('Should return null when the second parameter is not a number', () => {
     expect(multiplyValue(4, "[kanye west]")).toBe(null);
     expect(multiplyValue(2, "taylor swift")).toBe(null);
-    expect(multiplyValue(7, {
+    expect(multiplyValue("actors", {
       a: "matthew mcconaughey"
     })).toBe(null);
   });
