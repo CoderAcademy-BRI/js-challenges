@@ -12,8 +12,16 @@ Check your solution by running the tests:
 npm test
 */
 
+// 29 Sept 2019
 function vowels(string) {
-    // Your code here
+    let splitString = string.split("");
+    let vowelArray = [];
+    for (let letter of splitString) {
+        if (letter.match(/[aeiou]/gi)) {
+            vowelArray.push(letter);
+        }
+    }
+    return vowelArray;
 }
 
 module.exports = {
