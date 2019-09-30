@@ -27,3 +27,4 @@
 * 09_oddOrEven
 * 10_numberPersistence
 * 12_vowels.js
+* 13_dijkstra_algorithm
