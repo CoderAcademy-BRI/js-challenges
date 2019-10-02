@@ -26,5 +26,7 @@
 * 08_welcome
 * 09_oddOrEven
 * 10_numberPersistence
-* 12_vowels.js
+* 12_vowels
 * 13_dijkstra_algorithm
+* 14_supermaket
+* 15_node
